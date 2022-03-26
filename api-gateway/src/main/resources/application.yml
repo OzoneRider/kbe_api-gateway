@@ -1,0 +1,17 @@
+server:
+  port:
+    4440
+
+spring:
+  application:
+    name: kbe-gateway
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4040"
+            allowedHeaders:
+              - content-type
+            allowedMethods:
+              - GET
